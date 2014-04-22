@@ -39,20 +39,20 @@ c = 3
 
 For i = Firstrow To lastRow
 
-    poNumber = ""
-    trackingNumber = ""
-    quantityShipped = ""
-    caseNumber = ""
-    actualShipDate = ""
-    poackdate = ""
+poNumber = ""
+trackingNumber = ""
+quantityShipped = ""
+caseNumber = ""
+actualShipDate = ""
+poackdate = ""
     
 
-    poNumber = Sheets(createShipments).Cells(i, 1)
-    trackingNumber = Sheets(createShipments).Cells(i, 2)
-    quantityShipped = Sheets(createShipments).Cells(i, 3)
-    actualShipDate = Sheets(createShipments).Cells(i, 4)
-    caseNumber = Sheets(createShipments).Cells(i, 5)
-    poackdate = Sheets(createShipments).Cells(i, 6)
+poNumber = Sheets(createShipments).Cells(i, 1)
+trackingNumber = Sheets(createShipments).Cells(i, 2)
+quantityShipped = Sheets(createShipments).Cells(i, 3)
+actualShipDate = Sheets(createShipments).Cells(i, 4)
+caseNumber = Sheets(createShipments).Cells(i, 5)
+poackdate = Sheets(createShipments).Cells(i, 6)
      
     
     
@@ -66,7 +66,7 @@ For i = Firstrow To lastRow
   
 
     ' Change this to look for caseNumber to get caseID
-    If caseNumber <> "" Then
+If caseNumber <> "" Then
     
         'Query cases
         '----------------------------------------------------------------------------
@@ -83,9 +83,8 @@ For i = Firstrow To lastRow
         
         
 
-        
-        q = 3
-        For q = 3 To 50
+q = 3
+    For q = 3 To 50
         
         If Sheets(casesEasyPull).Cells(q, 1) = "" Then
             If q = 3 Then
@@ -268,7 +267,7 @@ For i = 3 To lastRow
                 
 
                 
-               If Sheets(casesEasyPull).Range("J3") = "a03a000000ETSgTAAX" Or Sheets(casesEasyPull).Range("J3") = "a03a000000ETSgsAAH" Or Sheets(casesEasyPull).Range("J3") = "a03a000000ETSgZAAX" Then
+If Sheets(casesEasyPull).Range("J3") = "a03a000000ETSgTAAX" Or Sheets(casesEasyPull).Range("J3") =     "a03a000000ETSgsAAH" Or Sheets(casesEasyPull).Range("J3") = "a03a000000ETSgZAAX" Then
                     Sheets(casesEasyPush).Cells(i, 35) = "Warehouse" 'vendor or warehouse
        
                     Else
@@ -339,7 +338,7 @@ i = 3
 
 For i = 3 To lookup
 
-    Sheets("Cases - Easy Push").Cells(i, 8) = Application.IfError(Application.VLookup(Sheets("Cases - Easy Push").Range("E" & i), Sheets("Supplies").Range("A:D"), 4, 0), "")
+ Sheets("Cases - Easy Push").Cells(i, 8) = Application.IfError(Application.VLookup(Sheets("Cases - Easy Push").Range("E" & i), Sheets("Supplies").Range("A:D"), 4, 0), "")
     
     If Sheets("Cases - Easy Push").Cells(i, 8) <> "" Then
         Sheets("Cases - Easy Push").Cells(i, 6) = "Do Not Fulfill"
