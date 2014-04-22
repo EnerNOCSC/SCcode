@@ -6,19 +6,19 @@ All of the SC macros code we've got!
 
 OPIE v3.4 Cases and MOLIs 1.6.xlsm
 
-Sub Case_query()
+    Sub Case_query()
 '
 ' Case_query Macro
 '
 '
 
-Dim Firstrow, lastRow, lookup As Integer
-Dim createShipments, casesEasyPull, shipmentsEasyPull, shipmentsEasyPush, fulfilldate, poackdate, shipmentsFullPush, casesEasyPush As String
-Dim poNumber, trackingNumber, quantityShipped, actualShipDate, caseNumber, caseID, NextLine As String
+    Dim Firstrow, lastRow, lookup As Integer
+    Dim createShipments, casesEasyPull, shipmentsEasyPull, shipmentsEasyPush, fulfilldate, poackdate, shipmentsFullPush, casesEasyPush As String
+    Dim poNumber, trackingNumber, quantityShipped, actualShipDate, caseNumber, caseID, NextLine As String
 
-createShipments = "Create Shipments"
+        createShipments = "Create Shipments"
 casesEasyPull = "Cases - Easy Pull"
-casesEasyPush = "Cases - Easy Push"
+    casesEasyPush = "Cases - Easy Push"
 shipmentsEasyPull = "Shipments - Easy Pull"
 shipmentsEasyPush = "Shipments - Easy Push"
 shipmentsFullPush = "Shipments - Full Push"
