@@ -13,31 +13,25 @@ OPIE v3.4 Cases and MOLIs 1.6.xlsm
 '
 
     Dim Firstrow, lastRow, lookup As Integer
-    Dim createShipments, casesEasyPull, shipmentsEasyPull, shipmentsEasyPush, fulfilldate, poackdate, shipmentsFullPush, casesEasyPush As String
+    Dim createShipments, casesEasyPull, shipmentsEasyPull, shipmentsEasyPush, fulfilldate, poackdate, shipmentsFullPush,     casesEasyPush As String
     Dim poNumber, trackingNumber, quantityShipped, actualShipDate, caseNumber, caseID, NextLine As String
-
-        createShipments = "Create Shipments"
-casesEasyPull = "Cases - Easy Pull"
+    createShipments = "Create Shipments"
+        casesEasyPull = "Cases - Easy Pull"
     casesEasyPush = "Cases - Easy Push"
-shipmentsEasyPull = "Shipments - Easy Pull"
-shipmentsEasyPush = "Shipments - Easy Push"
-shipmentsFullPush = "Shipments - Full Push"
-
-Firstrow = 2
-
-' This line finds the last populated row
-With Sheets(createShipments)
+    shipmentsEasyPull = "Shipments - Easy Pull"
+    shipmentsEasyPush = "Shipments - Easy Push"
+    shipmentsFullPush = "Shipments - Full Push"
+    Firstrow = 2
+    With Sheets(createShipments) ' This line finds the last populated row
     lastRow = .Cells.Find(what:="*", _
     SearchDirection:=xlPrevious, _
     SearchOrder:=xlByRows).row
-End With
-
-Dim i, g, q, t, p, found, c As Integer
-i = Firstrow
-g = 3
-c = 3
-
-For i = Firstrow To lastRow
+    End With
+    Dim i, g, q, t, p, found, c As Integer
+    i = Firstrow
+    g = 3
+    c = 3
+    For i = Firstrow To lastRow
 
 poNumber = ""
 trackingNumber = ""
