@@ -25,7 +25,7 @@ shipmentsFullPush = "Shipments - Full Push"
 
 Firstrow = 2
 
-' Find the last populated row
+' This line finds the last populated row
 With Sheets(createShipments)
     lastRow = .Cells.Find(what:="*", _
     SearchDirection:=xlPrevious, _
