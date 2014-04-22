@@ -32,8 +32,7 @@ OPIE v3.4 Cases and MOLIs 1.6.xlsm
     g = 3
     c = 3
     For i = Firstrow To lastRow
-
-poNumber = ""
+    poNumber = ""
 trackingNumber = ""
 quantityShipped = ""
 caseNumber = ""
